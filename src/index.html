@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code in the Dark</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bracket"></div>
+
+    <template id="rounds">
+        <section class="rounds">
+            <div class="rounds__connector rounds__connector--left"></div>
+            <div class="rounds__wrapper"></div>
+            <div class="rounds__connector rounds__connector--right"></div>
+        </section>
+    </template>
+
+    <template id="round">
+        <div class="round">
+            <div class="round__connector round__connector--left"></div>
+            <div>
+                <div class="round__timing"></div>
+                <div class="round__members"></div>
+            </div>
+            <div class="round__connector round__connector--right"></div>
+        </div>
+    </template>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

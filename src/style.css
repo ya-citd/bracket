@@ -1,0 +1,116 @@
+:root {
+    --color-grey-dark: #202020;
+    --color-grey-light: #c0c0c8;
+    --margin-timing: 18px;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url('assets/bg.png') no-repeat var(--color-grey-dark);
+    background-size: 285px;
+    background-position: center calc(50% - 240px);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.bracket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.bracket--visible {
+    opacity: 1;
+}
+
+.rounds {
+    display: flex;
+    align-items: center;
+}
+
+.rounds__connector {
+    display: none;
+    width: 1px;
+    margin-top: var(--margin-timing);
+    background-color: var(--color-grey-light);
+}
+
+
+.rounds:first-child .rounds__connector--right {
+    display: block;
+}
+
+.rounds:first-child .round__connector--left {
+    display: none;
+}
+
+.rounds:last-child .rounds__connector--left {
+    display: block;
+}
+
+.rounds:last-child .round__connector--right {
+    display: none;
+}
+
+.round {
+    display: flex;
+    align-items: center;
+}
+
+.round:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.round__connector {
+    display: block;
+    width: 32px;
+    height: 1px;
+    margin-top: var(--margin-timing);
+    background-color: var(--color-grey-light);
+}
+
+.round__timing {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.round__members {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.round__member {
+    display: block;
+    width: 220px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-grey-dark);
+    line-height: 40px;
+}
+
+.round__member:hover {
+    text-decoration: underline;
+}
+
+.round__member:not(:last-child) {
+    border-bottom: 1px solid var(--color-grey-dark);
+}
+
+.round__member::first-letter {
+    color: red;
+}
+
+.round__member--winner {
+    background-color: #59cb8f;
+}

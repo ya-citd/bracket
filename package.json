@@ -1,0 +1,11 @@
+{
+    "name": "cid-bracket",
+    "version": "0.1.0",
+    "description": "Code in the Dark bracket",
+    "scripts": {
+        "start": "http-server src"
+    },
+    "dependencies": {
+        "http-server": "^14.1.1"
+    }
+}
